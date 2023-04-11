@@ -2,7 +2,7 @@ import { Heading } from "@chakra-ui/react";
 import React from "react";
 
 const Name = () => {
-  return <Heading>Thomas Wöhrle</Heading>;
+  return <Heading color={"teal.700"}>Thomas Wöhrle</Heading>;
 };
 
 export default Name;

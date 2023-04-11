@@ -16,7 +16,6 @@ const App = () => {
         activeButton={activePage}
         buttons={[
           { value: "Home", link: "/home" },
-          { value: "Apps", link: "/apps" },
           { value: "Portfolio", link: "/portfolio" },
           { value: "Info", link: "/info" },
         ]}
@@ -24,7 +23,7 @@ const App = () => {
       />
       <Box
         minHeight={{ base: "2xl", lg: "3xl" }}
-        backgroundColor="dodgerblue"
+        backgroundColor="gray.300"
         padding={16}
       >
         <Routes>
