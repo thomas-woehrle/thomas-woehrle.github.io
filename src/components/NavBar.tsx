@@ -1,7 +1,7 @@
 import React from "react";
 import Name from "./Name";
 import { Button, ButtonGroup, HStack, Text } from "@chakra-ui/react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 interface ButtonInfo {
   value: string;
@@ -15,13 +15,15 @@ interface Props {
 }
 
 const NavBar = ({ activeButton, buttons, onNavbarClick }: Props) => {
+  const navigate = useNavigate();
+
   return (
     <HStack padding={6} justifyContent="space-between">
       <Name />
       <ButtonGroup
         bgColor={"gray.50"}
         borderRadius={"lg"}
-        width={"lg"}
+        width={"md"}
         padding={2}
         variant="ghost"
         size={"lg"}
@@ -33,9 +35,12 @@ const NavBar = ({ activeButton, buttons, onNavbarClick }: Props) => {
             width={button.value === activeButton ? "100%" : "auto"}
             border={button.value === activeButton ? "1px" : "0px"}
             borderColor={"teal"}
-            onClick={() => onNavbarClick(button.value)}
+            onClick={() => {
+              onNavbarClick(button.value);
+              navigate(button.link);
+            }}
           >
-            <Link to={button.link}>{button.value}</Link>
+            {button.value}
           </Button>
         ))}
         {/* <Button width={"100%"} border={"1px"} borderColor={"teal"} value="home">
