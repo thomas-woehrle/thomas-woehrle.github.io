@@ -2,8 +2,7 @@
   "slug": "alternativeF1",
   "title": "Formula 1 Alternative Standings Calculator",
   "shortText": "Choose drivers or races to be excluded from the championship and recalculate the standings for the year. Possible for all 70 seasons of F1.",
-  "longText": " ",
-  "pageLink": " ",
+  "longText": "Choose drivers or races to be excluded from the championship and recalculate the standings for the year. Possible for all 70 seasons of F1. Fastest Laps are included from 2019 onwards. Not all drivers of the old races are included. For example the Indy500 was part of the calendar in the 50s.",
   "previewImage": "",
   "images": ["", ""]
 }

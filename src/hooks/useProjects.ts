@@ -6,7 +6,8 @@ export interface Project {
   shortText: string,
   longText: string,
   previewImage: string,
-  images: string[]
+  images: string[],
+  pageLink?: string
 }
 
 const useProjects = (projectSlugs: string[], deps?: any[]) => {

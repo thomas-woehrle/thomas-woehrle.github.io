@@ -31,7 +31,6 @@ const ProjectCard = ({
   objectFitContain,
 }: Props) => {
   const navigate = useNavigate();
-
   return (
     <Card
       direction={{ base: "column", sm: "row" }}

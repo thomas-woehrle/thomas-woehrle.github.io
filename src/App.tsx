@@ -7,7 +7,7 @@ import MainPage from "./pages/MainPage";
 import Portfolio from "./pages/Portfolio";
 import Footer from "./components/Footer";
 import TestingSite from "./pages/TestingSite";
-import Project from "./pages/Project";
+import ProjectDetails from "./pages/ProjectDetails";
 
 const App = () => {
   const [activePage, setActivePage] = useState("Home");
@@ -31,7 +31,7 @@ const App = () => {
         <Routes>
           <Route path="/home" element={<MainPage />} />
           <Route path="/portfolio" element={<Portfolio />} />
-          <Route path="/portfolio/:projectSlug" element={<Project />} />
+          <Route path="/portfolio/:projectSlug" element={<ProjectDetails />} />
           <Route path="/info" element={<TestingSite />} />
         </Routes>
       </Box>

@@ -17,7 +17,7 @@ const ProjectGrid = () => {
           key={project.title}
           imageSrc={project.previewImage}
           title={project.title}
-          link=""
+          link={project.pageLink || `${project.slug}`}
           objectFitContain={false}
         >
           {project.shortText}
