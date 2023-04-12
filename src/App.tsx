@@ -6,6 +6,7 @@ import { Routes, Route } from "react-router-dom";
 import MainPage from "./pages/MainPage";
 import Portfolio from "./pages/Portfolio";
 import Footer from "./components/Footer";
+import TestingSite from "./pages/TestingSite";
 
 const App = () => {
   const [activePage, setActivePage] = useState("Home");
@@ -29,29 +30,11 @@ const App = () => {
         <Routes>
           <Route path="/home" element={<MainPage />} />
           <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/info" element={<TestingSite />} />
         </Routes>
       </Box>
       <Footer />
     </Box>
-
-    // <Box bgColor={"gray.200"} height={"1000px"}>
-    //   <NavBar />
-    //   <Center padding={4}>
-    //     <FrontPageText />
-    //   </Center>
-    // </Box>
-    // <Box bgColor={"gray.200"} height={"100%"}>
-    //   <Grid templateAreas={`"nav" "main"`}>
-    //     <GridItem area="nav" bgColor={"gray.200"} marginBottom={4}>
-    //       <NavBar />
-    //     </GridItem>
-    //     <GridItem area="main" bgColor={"gray.200"}>
-    //       <Center padding={4}>
-    //         <FrontPageText />
-    //       </Center>
-    //     </GridItem>
-    //   </Grid>
-    // </Box>
   );
 };
 
