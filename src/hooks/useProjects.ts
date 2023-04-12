@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 
-interface Project {
+export interface Project {
   slug: string,
   title: string,
   shortText: string,
