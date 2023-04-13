@@ -1,22 +1,39 @@
-import { Heading, Highlight } from "@chakra-ui/react";
+import { Divider, Heading, Highlight, VStack } from "@chakra-ui/react";
 import React, { ReactNode } from "react";
 
 const FrontPageText = () => {
   return (
-    <Heading
-      fontFamily={"mono"}
-      textAlign={"center"}
-      fontSize={"5xl"}
-      maxWidth={"2xl"}
-    >
-      <Highlight
-        query={["consectetur", "laudantium"]}
-        styles={{ bg: "teal.200" }}
+    <VStack maxWidth={"4xl"} spacing={"16"}>
+      <Heading
+        fontFamily={"mono"}
+        textAlign={"center"}
+        fontSize={"5xl"}
+        lineHeight={"xl"}
       >
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, ad
-        repellat nihil rem facilis laudantium sit aut cumque fuga? Consectetur!
-      </Highlight>
-    </Heading>
+        <Highlight
+          query={["Thomas", "Information Systems"]}
+          styles={{ bg: "teal.200" }}
+        >
+          Hi, my name is Thomas. I study Information Systems at the Technical
+          University of Munich.
+        </Highlight>
+      </Heading>
+      <Divider color={"teal.900"} border={"4px"} />
+      <Heading
+        fontFamily={"mono"}
+        textAlign={"center"}
+        fontSize={"3xl"}
+        lineHeight={"lg"}
+      >
+        <Highlight
+          query={["Projects", "Info", "top right"]}
+          styles={{ bg: "purple.200" }}
+        >
+          You can take a look at my Projects and get more Info about myself and
+          this website via the tabs on the top right.
+        </Highlight>
+      </Heading>
+    </VStack>
   );
 };
 

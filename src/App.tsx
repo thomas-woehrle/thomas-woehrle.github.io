@@ -8,6 +8,7 @@ import Portfolio from "./pages/Portfolio";
 import Footer from "./components/Footer";
 import TestingSite from "./pages/TestingSite";
 import ProjectDetails from "./pages/ProjectDetails";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 
 const App = () => {
   const [activePage, setActivePage] = useState("Home");
@@ -33,6 +34,7 @@ const App = () => {
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/portfolio/:projectSlug" element={<ProjectDetails />} />
           <Route path="/info" element={<TestingSite />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         </Routes>
       </Box>
       <Footer />

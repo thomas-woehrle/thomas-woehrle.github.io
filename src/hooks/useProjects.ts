@@ -5,6 +5,7 @@ export interface Project {
   title: string,
   shortText: string,
   longText: string,
+  githubRepo?: string,
   previewImage: string,
   images: string[],
   pageLink?: string

@@ -9,12 +9,14 @@ import {
   CardBody,
   CardFooter,
   Button,
+  Link,
 } from "@chakra-ui/react";
 import React, { useState } from "react";
 import MultiPictureCard from "../components/MultiPictureCard";
 import useProject from "../hooks/useProject";
 import { useParams } from "react-router-dom";
 import { Project } from "../hooks/useProjects";
+import { ExternalLinkIcon } from "@chakra-ui/icons";
 
 const ProjectDetails = () => {
   const { projectSlug } = useParams();
@@ -24,24 +26,34 @@ const ProjectDetails = () => {
     project = useProject(projectSlug);
   }
 
+  console.log("project repo: ", project?.githubRepo);
   return (
     <Card
       direction={{ base: "column", lg: "row" }}
       borderRadius={"lg"}
       padding={8}
+      bgColor={"gray.50"}
     >
-      <VStack>
+      <VStack width={"100%"}>
         <CardBody>
-          <Heading>{project?.title}</Heading>
+          <Heading mb={4}>{project?.title}</Heading>
           <Text>{project?.longText}</Text>
         </CardBody>
         <CardFooter>
-          <Button>View GitHub Repo</Button>
+          {project?.githubRepo ? (
+            <Link href={project?.githubRepo} isExternal>
+              <Button colorScheme="purple" disabled>
+                View GitHub Repo <ExternalLinkIcon mx={2} />
+              </Button>
+            </Link>
+          ) : (
+            <Button colorScheme="gray" disabled>
+              No Github Repo available
+            </Button>
+          )}
         </CardFooter>
       </VStack>
-      <Box minWidth={"lg"} height={"lg"} bgColor={"teal.100"}>
-        <MultiPictureCard />
-      </Box>
+      <MultiPictureCard />
     </Card>
   );
 };
