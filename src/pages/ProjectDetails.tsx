@@ -14,7 +14,7 @@ import {
 import React, { useState } from "react";
 import MultiPictureCard from "../components/MultiPictureCard";
 import useProject from "../hooks/useProject";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { Project } from "../hooks/useProjects";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
 
@@ -26,7 +26,6 @@ const ProjectDetails = () => {
     project = useProject(projectSlug);
   }
 
-  console.log("project repo: ", project?.githubRepo);
   return (
     <Card
       direction={{ base: "column", lg: "row" }}
