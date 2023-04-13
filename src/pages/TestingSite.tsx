@@ -1,20 +1,17 @@
-import { Box, Text } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 
-const HighlightedText = () => {
+const GradientText = () => {
   return (
-    <Box position="relative" display="inline-block">
-      <Text as="span">This is some text</Text>
-      <Box
-        position="absolute"
-        top={0}
-        left={0}
-        h="100%"
-        w="50%"
-        bg="yellow.200"
-        zIndex={-1}
-      />
+    <Box
+      as="span"
+      bgGradient="linear(to-r, #F56565, #FADB5F, #68D391)"
+      bgClip="text"
+      //textFillColor="transparent"
+      display="inline"
+    >
+      Hallo
     </Box>
   );
 };
 
-export default HighlightedText;
+export default GradientText;

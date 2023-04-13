@@ -1,3 +1,15 @@
 body {
   background-color: #E2E8F0;
 }
+
+@font-face {
+  font-family: 'AlumniSans';
+  src: url('assets/AlumniSans-ExtraLight.ttf') format('truetype');
+  /* Add other font formats and sources as needed */
+  /* e.g., woff, woff2, eot, svg, etc. */
+}
+
+/* Use the custom font in your Chakra UI components or other styles */
+/* body {
+  font-family: 'CustomFont', sans-serif;
+} */

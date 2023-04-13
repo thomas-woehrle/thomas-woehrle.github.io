@@ -18,7 +18,7 @@ const NavBar = ({ activeButton, buttons, onNavbarClick }: Props) => {
   const navigate = useNavigate();
 
   return (
-    <HStack padding={6} justifyContent="space-between">
+    <HStack padding={6} paddingLeft={10} justifyContent="space-between">
       <Name />
       <ButtonGroup
         bgColor={"gray.50"}
