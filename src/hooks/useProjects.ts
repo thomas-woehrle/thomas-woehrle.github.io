@@ -26,7 +26,6 @@ const useProjects = (projectSlugs: string[], deps?: any[]) => {
     loadProjects();
   }, [])
 
-  console.log(projects)
   return projects;
 }
 

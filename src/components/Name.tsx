@@ -5,7 +5,7 @@ const Name = () => {
   return (
     <Heading
       fontFamily={"logoFont"}
-      fontSize={"6xl"}
+      fontSize={{ base: "3xl", md: "6xl" }}
       borderRadius={"lg"}
       padding={1}
     >

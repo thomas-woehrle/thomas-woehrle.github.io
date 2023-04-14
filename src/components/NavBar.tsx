@@ -1,7 +1,18 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Name from "./Name";
-import { Button, ButtonGroup, HStack, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  ButtonGroup,
+  HStack,
+  Menu,
+  MenuButton,
+  MenuItem,
+  MenuList,
+  Text,
+} from "@chakra-ui/react";
 import { Link, useNavigate } from "react-router-dom";
+import { ChevronDownIcon } from "@chakra-ui/icons";
 
 interface ButtonInfo {
   value: string;
@@ -16,40 +27,92 @@ interface Props {
 
 const NavBar = ({ activeButton, buttons, onNavbarClick }: Props) => {
   const navigate = useNavigate();
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const BREAKPOINT = 576;
+
+  useEffect(() => {
+    const handleResize = () => {
+      // console.log(
+      //   "handleResize called. setWidth: ",
+      //   windowWidth,
+      //   ", currentWidth: ",
+      //   window.innerWidth
+      // );
+      if (
+        (window.innerWidth >= BREAKPOINT && windowWidth < BREAKPOINT) ||
+        (window.innerWidth < BREAKPOINT && windowWidth >= BREAKPOINT)
+      ) {
+        console.log(window.innerWidth);
+        setWindowWidth(window.innerWidth);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      // Cleanup the event listener on component unmount
+      window.removeEventListener("resize", handleResize);
+    };
+  });
 
   return (
-    <HStack padding={6} paddingLeft={10} justifyContent="space-between">
+    <HStack padding={6} paddingLeft={8} justifyContent="space-between">
       <Name />
-      <ButtonGroup
-        bgColor={"gray.50"}
-        borderRadius={"lg"}
-        width={"md"}
-        padding={2}
-        variant="ghost"
-        size={"lg"}
-        colorScheme={"teal"}
-      >
-        {buttons.map((button) => (
-          <Button
-            key={button.value}
-            width={button.value === activeButton ? "100%" : "auto"}
-            border={button.value === activeButton ? "1px" : "0px"}
-            borderColor={"teal"}
-            onClick={() => {
-              onNavbarClick(button.value);
-              navigate(button.link);
-            }}
+      {windowWidth < BREAKPOINT ? (
+        <Menu>
+          <MenuButton
+            as={Button}
+            rightIcon={<ChevronDownIcon />}
+            bgColor={"gray.50"}
           >
-            {button.value}
-          </Button>
-        ))}
-        {/* <Button width={"100%"} border={"1px"} borderColor={"teal"} value="home">
-          <Link to={"/home"}>home</Link>
-        </Button>
-        <Button>Apps</Button>
-        <Button>Portfolio</Button>
-        <Button>Info</Button> */}
-      </ButtonGroup>
+            Menu
+          </MenuButton>
+          <MenuList bgColor={"gray.50"}>
+            {buttons.map((button) => (
+              <MenuItem
+                // as="a"
+                // href={button.link}
+                key={button.value}
+                fontWeight={"semibold"}
+                bgColor={button.value === activeButton ? "teal" : "gray.50"}
+                borderRadius={"lg"}
+                color={button.value === activeButton ? "gray.50" : "gray.900"}
+                onClick={() => {
+                  onNavbarClick(button.value);
+                  navigate(button.link);
+                }}
+              >
+                {button.value}
+              </MenuItem>
+            ))}
+          </MenuList>
+        </Menu>
+      ) : (
+        <ButtonGroup
+          bgColor={"gray.50"}
+          borderRadius={"lg"}
+          width={"md"}
+          padding={2}
+          variant="ghost"
+          size={"lg"}
+          colorScheme={"teal"}
+        >
+          {buttons.map((button) => (
+            <Button
+              key={button.value}
+              width={button.value === activeButton ? "100%" : "auto"}
+              border={button.value === activeButton ? "1px" : "0px"}
+              borderColor={"teal"}
+              onClick={() => {
+                onNavbarClick(button.value);
+                navigate(button.link);
+              }}
+            >
+              {button.value}
+            </Button>
+          ))}
+        </ButtonGroup>
+      )}
     </HStack>
   );
 };
