@@ -14,7 +14,7 @@ import {
 import { Link, useNavigate } from "react-router-dom";
 import { ChevronDownIcon } from "@chakra-ui/icons";
 
-interface ButtonInfo {
+export interface ButtonInfo {
   value: string;
   link: string;
 }
@@ -28,7 +28,7 @@ interface Props {
 const NavBar = ({ activeButton, buttons, onNavbarClick }: Props) => {
   const navigate = useNavigate();
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  const BREAKPOINT = 576;
+  const BREAKPOINT = 769;
 
   useEffect(() => {
     const handleResize = () => {
@@ -57,7 +57,12 @@ const NavBar = ({ activeButton, buttons, onNavbarClick }: Props) => {
 
   return (
     <HStack padding={6} paddingLeft={8} justifyContent="space-between">
-      <Name />
+      <Name
+        activeButton={buttons[0]}
+        onNameClick={() => {
+          onNavbarClick(buttons[0].value);
+        }}
+      />
       {windowWidth < BREAKPOINT ? (
         <Menu>
           <MenuButton
