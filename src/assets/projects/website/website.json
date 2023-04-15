@@ -1,9 +1,8 @@
 {
   "slug": "website",
-  "title": "the website you are viewing",
-  "shortText": " this website ",
-  "longText": " ",
-  "githubRepo": "https://github.com/thomas-woehrle/thomas-woehrle.github.io",
-  "previewImage": "",
-  "images": ["", ""]
+  "title": "The website you are looking at",
+  "description": "This website. It's purpose is to inform about myself and my Projects.",
+  "functionalities": ["discloses and links to my projects", "info about myself", "responsive layout", "client-side routing"],
+  "specialInfo": "You can get further info about this website under the Info tab on the top right.",
+  "githubRepo": "https://github.com/thomas-woehrle/thomas-woehrle.github.io"
 }

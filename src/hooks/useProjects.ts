@@ -3,12 +3,14 @@ import React, { useEffect, useState } from 'react'
 export interface Project {
   slug: string,
   title: string,
-  shortText: string,
-  longText: string,
+  description: string,
+  functionalities?: string[],
+  specialInfo?: string,
   githubRepo?: string,
-  previewImage: string,
-  images: string[],
-  pageLink?: string
+  previewImage?: string,
+  images?: string[],
+  pageLink?: string,
+  objectFitIsContain?: boolean
 }
 
 const useProjects = (projectSlugs: string[], deps?: any[]) => {

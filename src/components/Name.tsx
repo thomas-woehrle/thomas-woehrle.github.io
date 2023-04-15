@@ -15,6 +15,8 @@ const Name = ({ activeButton, onNameClick }: Props) => {
         fontFamily={"logoFont"}
         fontSize={{ base: "3xl", sm: "6xl" }}
         justifyContent={"center"}
+        color={"purple.800"}
+        textShadow={"-1px 1px blue"}
       >
         Thomas Wöhrle
       </Heading>

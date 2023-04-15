@@ -1,7 +1,6 @@
 import { Button, Center, Grid, GridItem, Heading, Box } from "@chakra-ui/react";
 import React, { Fragment, useState } from "react";
 import NavBar from "./components/NavBar";
-import FrontPageText from "./components/FrontPageText";
 import { Routes, Route } from "react-router-dom";
 import MainPage from "./pages/MainPage";
 import Portfolio from "./pages/Portfolio";
@@ -10,17 +9,18 @@ import TestingSite from "./pages/TestingSite";
 import ProjectDetails from "./pages/ProjectDetails";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import NonExistentPage from "./pages/NonExistentPage";
+import InfoPage from "./pages/InfoPage";
 
 const App = () => {
   const [activePage, setActivePage] = useState("Home");
 
   return (
-    <Box backgroundColor={"gray.200"}>
+    <Box backgroundColor={"gray.200"} minHeight={"100vh"}>
       <NavBar
         activeButton={activePage}
         buttons={[
           { value: "Home", link: "/home" },
-          { value: "Portfolio", link: "/portfolio" },
+          { value: "Projects", link: "/projects" },
           { value: "Info", link: "/info" },
         ]}
         onNavbarClick={(button) => setActivePage(button)}
@@ -32,11 +32,12 @@ const App = () => {
       >
         <Routes>
           <Route path="/home" element={<MainPage />} />
-          <Route path="/portfolio" element={<Portfolio />} />
-          <Route path="/portfolio/:projectSlug" element={<ProjectDetails />} />
-          <Route path="/info" element={<TestingSite />} />
+          <Route path="/projects" element={<Portfolio />} />
+          <Route path="/projects/:projectSlug" element={<ProjectDetails />} />
+          <Route path="/info" element={<InfoPage />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/*" element={<NonExistentPage />} />
+          <Route path="/test" element={<TestingSite />} />
         </Routes>
       </Box>
       <Footer />

@@ -12,24 +12,15 @@ import {
 import React, { ReactNode } from "react";
 import { useNavigate } from "react-router-dom";
 import image_placeholder from "../assets/image_placeholder.webp";
+import { Project } from "../hooks/useProjects";
 
 interface Props {
-  imageSrc: string;
-  title: string;
-  children: ReactNode;
-  link: string;
-  objectFitContain?: boolean;
+  project: Project;
 }
 
 // "https://images.unsplash.com/photo-1667489022797-ab608913feeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw5fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=800&q=60"
 
-const ProjectCard = ({
-  imageSrc,
-  title,
-  children,
-  link,
-  objectFitContain,
-}: Props) => {
+const ProjectCard = ({ project }: Props) => {
   const navigate = useNavigate();
   return (
     <Card
@@ -42,26 +33,26 @@ const ProjectCard = ({
       <Image
         width={{ base: "auto", sm: "3xs", md: "2xs" }}
         height={{ base: "auto", sm: "3xs", md: "2xs" }}
-        objectFit={objectFitContain ? "contain" : "cover"}
-        src={imageSrc === "" ? image_placeholder : imageSrc}
-        alt={`${title} picture`}
+        objectFit={project.objectFitIsContain ? "contain" : "cover"}
+        src={!project.previewImage ? image_placeholder : project.previewImage}
+        alt={`${project.title} picture`}
         borderRadius={"lg"}
       />
 
       <Stack justifyContent={"space-between"}>
         <CardBody paddingY="2">
           <Heading size="md" marginBottom={"2"}>
-            {title}
+            {project.title}
           </Heading>
 
-          <Text>{children}</Text>
+          <Text>{project.description}</Text>
         </CardBody>
 
         <CardFooter paddingY="2">
           <Button
             colorScheme="purple"
             variant={"outline"}
-            onClick={() => navigate(link)}
+            onClick={() => navigate(project.slug)}
             //whiteSpace={"normal"}
           >
             Show Project & Code
