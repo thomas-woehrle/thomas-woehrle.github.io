@@ -16,11 +16,13 @@ const useProjects = (projectSlugs: string[], deps?: any[]) => {
 
   useEffect(() => {
     const loadProjects = async () => {
-      const projectObjects = await Promise.all(
+      let projectObjects = await Promise.all(
         projectSlugs.map((projectSlug) =>
           import(`../assets/projects/${projectSlug}/${projectSlug}.json`)
+          .catch((err) => console.log("error in useProjects. You probably supply an invalid projectSlug"))
         )
       );
+      projectObjects = projectObjects.filter(projectObject => projectObject !== undefined );
       setProjects([...projectObjects]);
     };
     loadProjects();

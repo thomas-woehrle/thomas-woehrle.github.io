@@ -28,7 +28,7 @@ interface Props {
 const NavBar = ({ activeButton, buttons, onNavbarClick }: Props) => {
   const navigate = useNavigate();
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  const BREAKPOINT = 769;
+  const BREAKPOINT = 768;
 
   useEffect(() => {
     const handleResize = () => {
@@ -75,8 +75,6 @@ const NavBar = ({ activeButton, buttons, onNavbarClick }: Props) => {
           <MenuList bgColor={"gray.50"}>
             {buttons.map((button) => (
               <MenuItem
-                // as="a"
-                // href={button.link}
                 key={button.value}
                 fontWeight={"semibold"}
                 bgColor={button.value === activeButton ? "teal" : "gray.50"}
@@ -96,7 +94,7 @@ const NavBar = ({ activeButton, buttons, onNavbarClick }: Props) => {
         <ButtonGroup
           bgColor={"gray.50"}
           borderRadius={"lg"}
-          width={"md"}
+          width={"sm"}
           padding={2}
           variant="ghost"
           size={"lg"}

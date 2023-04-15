@@ -7,7 +7,7 @@ const FrontPageText = () => {
       <Heading
         fontFamily={"mono"}
         textAlign={"center"}
-        fontSize={{ base: "3xl", md: "5xl" }}
+        fontSize={{ base: "2xl", ms: "5xl" }}
         lineHeight={"xl"}
       >
         <Highlight
@@ -22,7 +22,7 @@ const FrontPageText = () => {
       <Heading
         fontFamily={"mono"}
         textAlign={"center"}
-        fontSize={{ base: "xl", md: "3xl" }}
+        fontSize={{ base: "lg", ms: "3xl" }}
         lineHeight={"lg"}
       >
         <Highlight
