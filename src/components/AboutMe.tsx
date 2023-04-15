@@ -1,7 +1,9 @@
 import { EmailIcon } from "@chakra-ui/icons";
 import {
+  Box,
   Button,
   Center,
+  HStack,
   Heading,
   Icon,
   Link,
@@ -37,9 +39,9 @@ const AboutMe = () => {
         velit quasi quos soluta. Consequuntur, illo.
       </Text>
       <Stack
-        direction={{ base: "column", sm: "row" }}
+        direction={{ base: "column", lg: "row" }}
+        spacing={8}
         justifyContent={"center"}
-        spacing={24}
         //buttongroup not possible because of responsiveness
       >
         <Link

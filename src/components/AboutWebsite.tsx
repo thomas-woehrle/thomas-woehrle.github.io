@@ -42,9 +42,11 @@ const AboutWebsite = () => {
         resolve:
         <List>
           <ListItem>- revisiting and disclosing old projects</ListItem>
+          <ListItem>- improve InfoPage button layout</ListItem>
           <ListItem>- uniform link management</ListItem>
-          <ListItem>- extensive error handling</ListItem>
+          <ListItem>- extensive/detailed error handling</ListItem>
           <ListItem>- improved UI (especially text)</ListItem>
+          <ListItem>- good commit/branch management</ListItem>
           <ListItem>- back-buttons</ListItem>
           <ListItem>
             - building the MultiPictureCard component to display multiple

@@ -3,6 +3,7 @@ import React from "react";
 import ProjectCard from "./ProjectCard";
 import f1Logo from "../assets/F1_logo.svg.png";
 import useProjects from "../hooks/useProjects";
+import FutureProjectsCard from "./FutureProjectsCard";
 
 const ProjectGrid = () => {
   const projectSlugs = ["alternativeF1", "website"];
@@ -14,6 +15,7 @@ const ProjectGrid = () => {
       {projects.map((project) => (
         <ProjectCard key={project.title} project={project} />
       ))}
+      <FutureProjectsCard />
     </SimpleGrid>
   );
 };
