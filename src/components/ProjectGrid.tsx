@@ -8,7 +8,7 @@ const ProjectGrid = () => {
   const projectSlugs = ["alternativeF1", "website"];
 
   const projects = useProjects(projectSlugs);
-  console.log(projects);
+
   return (
     <SimpleGrid columns={{ base: 1, xl: 2 }} spacing={"8"}>
       {projects.map((project) => (

@@ -40,8 +40,8 @@ const ProjectCard = ({
       borderRadius={"lg"}
     >
       <Image
-        width="2xs"
-        height="2xs"
+        width={{ base: "auto", sm: "3xs", md: "2xs" }}
+        height={{ base: "auto", sm: "3xs", md: "2xs" }}
         objectFit={objectFitContain ? "contain" : "cover"}
         src={imageSrc === "" ? image_placeholder : imageSrc}
         alt={`${title} picture`}

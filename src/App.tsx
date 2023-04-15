@@ -28,7 +28,7 @@ const App = () => {
       <Box
         minHeight={{ base: "2xl", lg: "3xl" }}
         backgroundColor="gray.300"
-        padding={16}
+        padding={{ base: 4, sm: 8, md: 16 }}
       >
         <Routes>
           <Route path="/home" element={<MainPage />} />
