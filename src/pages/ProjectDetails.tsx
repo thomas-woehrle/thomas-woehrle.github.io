@@ -1,9 +1,6 @@
 import {
-  Box,
   Card,
   Heading,
-  SimpleGrid,
-  Stack,
   VStack,
   Text,
   CardBody,
@@ -13,10 +10,9 @@ import {
   List,
   ListItem,
 } from "@chakra-ui/react";
-import React, { useState } from "react";
 import MultiPictureCard from "../components/MultiPictureCard";
 import useProject from "../hooks/useProject";
-import { useNavigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { Project } from "../hooks/useProjects";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
 

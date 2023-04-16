@@ -1,5 +1,4 @@
 import { Divider, Heading, Highlight, VStack } from "@chakra-ui/react";
-import React, { ReactNode } from "react";
 
 const FrontPageText = () => {
   return (

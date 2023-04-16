@@ -1,5 +1,4 @@
 import { Center, Heading, Icon, Link, VStack } from "@chakra-ui/react";
-import React from "react";
 import { BsFillCloudSlashFill } from "react-icons/bs";
 
 const NonExistentPage = () => {

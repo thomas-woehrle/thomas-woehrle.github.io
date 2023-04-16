@@ -1,16 +1,13 @@
 import { EmailIcon } from "@chakra-ui/icons";
 import {
-  Box,
   Button,
   Center,
-  HStack,
   Heading,
   Icon,
   Link,
   Stack,
   Text,
 } from "@chakra-ui/react";
-import React from "react";
 import {
   BsGithub,
   BsMortarboardFill,
@@ -31,12 +28,7 @@ const AboutMe = () => {
         </Heading>
       </Center>
       <Text fontSize={"2xl"} mb={10}>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi, facilis
-        vitae voluptates corrupti atque, architecto possimus praesentium
-        excepturi id quam quod fugit itaque porro quidem minima consectetur?
-        Libero repellat repellendus est ipsa beatae ratione fuga maiores
-        doloribus iste temporibus, eaque, veritatis consequuntur minima nemo
-        velit quasi quos soluta. Consequuntur, illo.
+        {/* text */}
       </Text>
       <Stack
         direction={{ base: "column", lg: "row" }}

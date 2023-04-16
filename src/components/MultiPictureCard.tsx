@@ -1,4 +1,3 @@
-import React from "react";
 import { Image } from "@chakra-ui/react";
 import imagePlaceholder from "../assets/image_placeholder.webp";
 

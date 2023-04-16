@@ -9,7 +9,6 @@ import {
   Image,
   Box,
 } from "@chakra-ui/react";
-import React, { ReactNode } from "react";
 import { useNavigate } from "react-router-dom";
 import image_placeholder from "../assets/image_placeholder.webp";
 import { Project } from "../hooks/useProjects";

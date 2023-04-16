@@ -1,7 +1,7 @@
-import { Button, Center, Grid, GridItem, Heading, Box } from "@chakra-ui/react";
-import React, { Fragment, useState } from "react";
+import { Box } from "@chakra-ui/react";
+import { useState } from "react";
 import NavBar from "./components/NavBar";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import MainPage from "./pages/MainPage";
 import Portfolio from "./pages/Portfolio";
 import Footer from "./components/Footer";
@@ -38,6 +38,7 @@ const App = () => {
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/*" element={<NonExistentPage />} />
           <Route path="/test" element={<TestingSite />} />
+          <Route path="/" element={<Navigate to={"/home"} />} />
         </Routes>
       </Box>
       <Footer />

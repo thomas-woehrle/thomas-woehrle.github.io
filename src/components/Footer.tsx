@@ -1,15 +1,5 @@
 import { EmailIcon } from "@chakra-ui/icons";
-import {
-  Center,
-  HStack,
-  StackItem,
-  VStack,
-  Text,
-  Heading,
-  Link,
-  Icon,
-} from "@chakra-ui/react";
-import React from "react";
+import { Center, HStack, VStack, Text, Link, Icon } from "@chakra-ui/react";
 import { BsGithub } from "react-icons/bs";
 
 // use of chakra-ui Link instead of react-router-dom. Should be made consistent

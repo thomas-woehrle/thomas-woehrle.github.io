@@ -8,7 +8,6 @@ import {
   ListItem,
   Text,
 } from "@chakra-ui/react";
-import React from "react";
 
 const AboutWebsite = () => {
   return (
@@ -32,7 +31,7 @@ const AboutWebsite = () => {
         <br />
         <br />I took a react course on codewithmosh.com and went on to build
         this website within one week in April. I value the simple UI design, the
-        responsive layout and the highly modular projects page.
+        responsive layout and the modular projects page.
         <br />
         It is my first website and has great room for improvement, which is why
         I will continue to update the design, architecture and functionalities
@@ -42,6 +41,7 @@ const AboutWebsite = () => {
         resolve:
         <List>
           <ListItem>- revisiting and disclosing old projects</ListItem>
+          <ListItem>- include image handling in useProjects hook</ListItem>
           <ListItem>- improve InfoPage button layout</ListItem>
           <ListItem>- uniform link management</ListItem>
           <ListItem>- extensive/detailed error handling</ListItem>

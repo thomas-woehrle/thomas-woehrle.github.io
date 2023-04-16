@@ -7,12 +7,7 @@ import {
   Button,
   Text,
   Image,
-  Box,
 } from "@chakra-ui/react";
-import React, { ReactNode } from "react";
-import { useNavigate } from "react-router-dom";
-import image_placeholder from "../assets/image_placeholder.webp";
-import { Project } from "../hooks/useProjects";
 
 // "https://images.unsplash.com/photo-1667489022797-ab608913feeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw5fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=800&q=60"
 // for the time being i copied the ProjectCard and changed styling

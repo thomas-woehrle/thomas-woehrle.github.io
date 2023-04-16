@@ -1,5 +1,4 @@
 import { Box, Divider } from "@chakra-ui/react";
-import React from "react";
 import AboutMe from "../components/AboutMe";
 import AboutWebsite from "../components/AboutWebsite";
 

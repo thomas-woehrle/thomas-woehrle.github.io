@@ -1,7 +1,5 @@
-import { Grid, Heading, SimpleGrid, Text } from "@chakra-ui/react";
-import React from "react";
+import { SimpleGrid } from "@chakra-ui/react";
 import ProjectCard from "./ProjectCard";
-import f1Logo from "../assets/F1_logo.svg.png";
 import useProjects from "../hooks/useProjects";
 import FutureProjectsCard from "./FutureProjectsCard";
 
