@@ -17,7 +17,7 @@ const FutureProjectsCard = () => {
     slug: "oldAndFutureProjects",
     title: "Old and future projects",
     description:
-      "I am currently revisiting old projects as well as working on new projects. They will be published here in the following months. ",
+      "I am currently revisiting old projects as well as working on new projects. They will be published here in the next months. ",
     objectFitIsContain: false,
   };
 
