@@ -37,7 +37,7 @@ const AboutMe = () => {
         //buttongroup not possible because of responsiveness
       >
         <Link
-          href="https://drive.google.com/file/d/1A43yy7QrhM0_evzlF-wh41apjGUJMiKT/view"
+          href="https://drive.google.com/file/d/1SZ54LPTHuMwrh7chwgRWl9z4cieTu5Ua/view?usp=sharing"
           isExternal
         >
           <Button
@@ -46,18 +46,6 @@ const AboutMe = () => {
             variant={"outline"}
           >
             My Resume
-          </Button>
-        </Link>
-        <Link
-          href="https://drive.google.com/file/d/1alC4whh229L7vRW1IhNpAFW4ySfzVINE/view?usp=sharing"
-          isExternal
-        >
-          <Button
-            variant={"outline"}
-            rightIcon={<Icon as={BsMortarboardFill} boxSize={6} />}
-            colorScheme="purple"
-          >
-            My Transcript of records
           </Button>
         </Link>
         <Link href="https://github.com/thomas-woehrle" isExternal>
